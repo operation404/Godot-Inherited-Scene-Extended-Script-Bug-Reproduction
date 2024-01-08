@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://dbbyuelppfj34"]
+
+[ext_resource type="Script" path="res://scripts/BaseEnemy.cs" id="1_540h7"]
+[ext_resource type="Texture2D" uid="uid://dgh31bn36yb5w" path="res://icon.svg" id="1_kar0n"]
+[ext_resource type="Script" path="res://scripts/MoveComponent.cs" id="2_djx3s"]
+
+[node name="BaseEnemy" type="Node2D"]
+script = ExtResource("1_540h7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_kar0n")
+
+[node name="MoveComponent" type="Node" parent="." node_paths=PackedStringArray("Actor")]
+script = ExtResource("2_djx3s")
+Actor = NodePath("..")

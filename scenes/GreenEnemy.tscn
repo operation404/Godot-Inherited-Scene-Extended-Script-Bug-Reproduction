@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dqdmh25gmi5v6"]
+
+[ext_resource type="PackedScene" uid="uid://dbbyuelppfj34" path="res://scenes/BaseEnemy.tscn" id="1_f54ow"]
+[ext_resource type="Script" path="res://scripts/GreenEnemy.cs" id="2_goiqh"]
+
+[node name="GreenEnemy" instance=ExtResource("1_f54ow")]
+script = ExtResource("2_goiqh")
+
+[node name="Sprite2D" parent="." index="0"]
+modulate = Color(0, 1, 0, 1)
+
+[node name="MoveComponent" parent="." index="1"]
+Velocity = Vector2(8, 0)
