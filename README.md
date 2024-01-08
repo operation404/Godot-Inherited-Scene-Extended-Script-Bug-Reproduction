@@ -3,7 +3,7 @@ Godot Engine v4.2.1.stable.mono.official.b09f793f5
 ## Problem Description
 A base scene (called `BaseEnemy` in this example) is created with a Node2D root and a child Node which has an exported field that is set to the scene root node through the Inspector. The base scene then has a c# script attached. An inherited scene (called `GreenEnemy`) is then created from the base scene and the base scene's script is extended for this inherited scene. The child Node of the extended scene does not have any changes made to its properties through the script or Inspector, its field still points to the scene root.
 
-When the inherited scene is instantiated, any attempts by the child Node to use the reference to the parent root Node fail as it is not correctly set to the inherited scene root (`GreenEnemy` in this case) but instead to a non-existent or immediately disposed base scene (`BaseEnemy` in this case). As a result, the following errors are thrown:
+When the inherited scene is instantiated, any attempts by the child Node to use the reference to the parent root Node fail as it is not correctly set to the inherited scene root (`GreenEnemy`) but instead to a non-existent or immediately disposed base scene (`BaseEnemy`). As a result, the following errors are thrown:
 ```
 E 0:00:01:0083   GodotObject.base.cs:73 @ nint Godot.GodotObject.GetPtr(Godot.GodotObject): System.ObjectDisposedException: Cannot access a disposed object.
 Object name: 'BaseEnemy'.
